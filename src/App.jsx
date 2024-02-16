@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import { VideoPlayer } from "./component/VideoPlayer";
+import { PlayList } from "./component/PlayList";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [videos, setVideos] = useState([
+    {
+      title: "Oussifooty",
+      url: "videos/oussifooty.mp4",
+      image: "image/oussifooty.jpeg",
+    },
+    {
+      title: "Hamilton: The GOAT",
+      url: "videos/hamilton.mp4",
+      image: "image/hamilton.jpeg",
+    },
+    {
+      title: "Farmer speaking English",
+      url: "videos/farmer.mp4",
+      image: "image/farmer.jpeg",
+    },
+    {
+      title: "F1: The Game",
+      url: "videos/f1.mp4",
+      image: "image/f1.jpeg",
+    },
+  ]);
+
+  const [currentVideo, setCurrentVideo] = useState(videos[0]);
+  const [playing, setPlaying] = useState(false);
+
+  const handleSelectVideo = (video) => {
+    setCurrentVideo(video);
+    setPlaying(true);
+  };
+
+  // const onSortEnd = ({ oldIndex, newIndex }) => {
+  //   setVideos(arrayMove(videos, oldIndex, newIndex));
+  // };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app">
+      <h1 className="app-title">Awesome Video Playlist</h1>
+      <div className="wrapper">
+        <div className="video-player-container">
+          <VideoPlayer video={currentVideo} playingOnClick={playing} />
+        </div>
+        <div className="playlist-container">
+          <PlayList
+            videos={videos}
+            onSelectVideo={handleSelectVideo}
+            currentVideo={currentVideo}
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
