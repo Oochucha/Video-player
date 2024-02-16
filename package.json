@@ -12,11 +12,14 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-player": "^2.14.1"
+    "react-player": "^2.14.1",
+    "react-sortablejs": "^6.1.4",
+    "sortablejs": "^1.15.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "@types/sortablejs": "^1.15.7",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",

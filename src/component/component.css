@@ -52,7 +52,7 @@
 }
 
 input[type="range"] {
-  width: calc(100% - 60px); /* Adjust width of seek input */
+  width: calc(100% - 60px);
   height: 8px;
   -webkit-appearance: none;
   background-color: #ddd;
@@ -85,7 +85,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .button {
-  background-color: #007bff; /* Contrast color */
+  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -94,5 +94,5 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
 }

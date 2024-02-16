@@ -35,10 +35,6 @@ function App() {
     setPlaying(true);
   };
 
-  // const onSortEnd = ({ oldIndex, newIndex }) => {
-  //   setVideos(arrayMove(videos, oldIndex, newIndex));
-  // };
-
   return (
     <div className="app">
       <h1 className="app-title">Awesome Video Playlist</h1>
@@ -51,6 +47,7 @@ function App() {
             videos={videos}
             onSelectVideo={handleSelectVideo}
             currentVideo={currentVideo}
+            setVideos={setVideos}
           />
         </div>
       </div>
