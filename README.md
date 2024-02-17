@@ -1,9 +1,3 @@
----
-runme:
-  id: 01HPW97H4QMQTTD5SPPHAQTWFJ
-  version: v3
----
-
 # Awesome Video Player
 
 ## Overview
