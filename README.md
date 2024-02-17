@@ -1,7 +1,5 @@
 # Awesome Video Player
 
-## Overview
-
 The Awesome Video Player App is a React.js application designed to provide users with a seamless video playback experience. It allows users to play videos from a playlist, with support for essential functionalities such as play/pause toggle, seeking, playback speed adjustment, volume control, and autoplay. Additionally, users can reorder videos in the playlist to customize their viewing experience.
 
 ## Features
