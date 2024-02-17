@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="app-title">Awesome Video Playlist</h1>
+      <h1 className="app-title">Awesome Video Player</h1>
       <div className="wrapper">
         <div className="video-player-container">
           <VideoPlayer video={currentVideo} playingOnClick={playing} />
